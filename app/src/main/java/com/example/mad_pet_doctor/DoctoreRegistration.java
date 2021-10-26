@@ -102,7 +102,7 @@ public class DoctoreRegistration extends AppCompatActivity {
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             databaseReference.child(id).setValue(DoctorReg);
                             Toast.makeText(DoctoreRegistration.this, "Doctor Registered Successfully.", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(DoctoreRegistration.this, Doctors.class));
+                            startActivity(new Intent(DoctoreRegistration.this, DoctorEditList.class));
                         }
 
                         @Override

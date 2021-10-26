@@ -117,6 +117,22 @@ public class AuthActivity extends AppCompatActivity {
                                     routeAdminActivity();
 
                                 }
+                                else if(inputEmail.equals("doctor@gmail.com")){
+                                    spinner.dismiss();
+                                    Toast.makeText(getApplicationContext(),
+                                            "Doctor Login Success",
+                                            Toast.LENGTH_SHORT)
+                                            .show();
+                                    routeDoctors();
+                                }
+                                else if(inputEmail.equals("medicalcenter@gmail.com")){
+                                    spinner.dismiss();
+                                    Toast.makeText(getApplicationContext(),
+                                            "Medical Center Login Success",
+                                            Toast.LENGTH_SHORT)
+                                            .show();
+                                    routeMedicalProfActivity();
+                                }
                                 else{
 
                                     Toast.makeText(getApplicationContext(),
@@ -240,5 +256,14 @@ public class AuthActivity extends AppCompatActivity {
         Intent intent = new Intent(AuthActivity.this, ResetPasswordEmailActivity.class);
         startActivity(intent);
     }
-
+    public void routeDoctors()
+    {
+        Intent intent = new Intent(AuthActivity.this, Doctors.class);
+        startActivity(intent);
+    }
+    public void routeMedicalProfActivity()
+    {
+        Intent intent = new Intent(AuthActivity.this, MedCenterEditList.class);
+        startActivity(intent);
+    }
 }

@@ -89,14 +89,22 @@
         <activity
             android:name=".ResetPasswordEmailActivity"
             android:exported="true" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity" >
 
-        <activity android:name=".AdminHome" />
+        </activity>
+        <activity android:name=".AdminHome" >
+
+        </activity>
         <activity android:name=".BlogContent"/>
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".CreateAccount" />
 
-        <activity android:name=".AuthActivity"/>
+        <activity android:name=".AuthActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ChatWithDoc"/>
         <activity android:name=".ChatWindow">
 
@@ -130,14 +138,9 @@
         </activity>
         <activity android:name=".BlogMenu">
 
+        </activity>
+        <activity android:name=".ActivityMainSideBar">
 
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-
-            </intent-filter>
         </activity>
 
     </application>
